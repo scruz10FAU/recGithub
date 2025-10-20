@@ -15,7 +15,9 @@ def transform(repos_html):
         number_of_stars = ''.join(r.select_one('a[href$="/stargazers"]').text.split())
         number_of_stars = int(number_of_stars.replace(",",""))
         stars_today = ''.join(r.select_one('span.float-sm-right').text.split())
-        stars_today = stars_today.replace("starstoday", "")
+        #stars_today = stars_today.replace("starstoday", "")
+        #stars_today = stars_today.replace("starsthismonth", "")
+        stars_today = stars_today.replace("starsthisweek", "")
         stars_today = int(stars_today.replace(",", ""))
         forks = ''.join(r.select_one('a[href$="/forks"]').text.split())
         forks = int(forks.replace(",",""))
@@ -39,13 +41,15 @@ def out_to_csv(repository_data, filename):
 
 def main():
     url = "https://github.com/trending"
+    url = "https://github.com/trending?since=monthly"
+    url = "https://github.com/trending?since=weekly"
     page = request_github_tranding(url)
     repos_html = extract(page)
     #print(repos_html)
     repo_data = transform(repos_html)
     #print(repo_data)
     print(format(repo_data))
-    out_to_csv(repo_data, "trending.csv")
+    out_to_csv(repo_data, "trending_week.csv")
 
 if __name__ == "__main__":
     main()
