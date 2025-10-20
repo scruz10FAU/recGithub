@@ -1,21 +1,21 @@
-Developer,Repository Name,Number of Stars
-@zealoushacker,anthropics/claude-cookbooks,"1,306starstoday"
-@nekohasekai,SagerNet/sing-box,52starstoday
-@ROBERT-MCDOWELL,DrewThomasson/ebook2audiobook,324starstoday
-@x1xhlol,x1xhlol/system-prompts-and-models-of-ai-tools,235starstoday
-@aliberts,huggingface/lerobot,88starstoday
-@esimkowitz,wavetermdev/waveterm,201starstoday
-@karpathy,karpathy/micrograd,115starstoday
-@nsarrazin,huggingface/chat-ui,224starstoday
-@cclauss,TheAlgorithms/Python,234starstoday
-@lfnovo,lfnovo/open-notebook,531starstoday
-@Anuken,Anuken/Mindustry,48starstoday
-@wintonzheng,Skyvern-AI/skyvern,220starstoday
-@LDOUBLEV,PaddlePaddle/PaddleOCR,713starstoday
-@Centril,clockworklabs/SpacetimeDB,160starstoday
-@dhh,basecamp/omarchy,191starstoday
-@BurntSushi,BurntSushi/ripgrep,63starstoday
-@gschier,mountain-loop/yaak,433starstoday
-@traviscibot,tokio-rs/tokio,44starstoday
-@vhf,EbookFoundation/free-programming-books,507starstoday
-@he3als,Atlas-OS/Atlas,97starstoday
+Developer,Repository Name,Number of Stars,Forks,Stars Today,Language
+@zealoushacker,anthropics/claude-cookbooks,23438,2410,1306,Jupyter Notebook
+@nekohasekai,SagerNet/sing-box,27350,3192,52,Go
+@ROBERT-MCDOWELL,DrewThomasson/ebook2audiobook,12451,944,324,Python
+@x1xhlol,x1xhlol/system-prompts-and-models-of-ai-tools,92217,25008,235,Unknown
+@aliberts,huggingface/lerobot,18268,2797,88,Python
+@esimkowitz,wavetermdev/waveterm,12189,489,201,Go
+@karpathy,karpathy/micrograd,13157,1954,115,Jupyter Notebook
+@nsarrazin,huggingface/chat-ui,9588,1463,224,TypeScript
+@cclauss,TheAlgorithms/Python,211612,48844,234,Python
+@lfnovo,lfnovo/open-notebook,6148,621,531,TypeScript
+@Anuken,Anuken/Mindustry,25118,3237,48,Java
+@wintonzheng,Skyvern-AI/skyvern,14954,1272,220,Python
+@LDOUBLEV,PaddlePaddle/PaddleOCR,59506,9012,713,Python
+@Centril,clockworklabs/SpacetimeDB,17923,625,160,Rust
+@dhh,basecamp/omarchy,15038,1371,191,Shell
+@BurntSushi,BurntSushi/ripgrep,56470,2270,63,Rust
+@gschier,mountain-loop/yaak,8864,315,433,TypeScript
+@traviscibot,tokio-rs/tokio,29896,2802,44,Rust
+@vhf,EbookFoundation/free-programming-books,373877,64959,507,Python
+@he3als,Atlas-OS/Atlas,17349,619,97,PowerShell
