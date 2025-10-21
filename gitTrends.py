@@ -22,32 +22,60 @@ def convert_number(string):
         except:
             print(f"Unable to convert number {string}")
             return 0
+        
+def get_topics(url):
+    if url:
+        # Ensure the link is complete (add base URL if necessary, e.g., for GitHub)
+        base_url = "https://github.com"  # Adjust if you're scraping a different site
+        full_url = base_url + url if not url.startswith('http') else url
+        
+        # Make a request to the repository page
+        try:
+            response = requests.get(full_url)
+            
+            response.raise_for_status()  # Check for HTTP errors
+            repo_soup = BeautifulSoup(response.text, 'html.parser')
+            
+            # Extract topics (GitHub topics are typically in <a> tags with class 'topic-tag')
+            topics = repo_soup.select('a.topic-tag')
+            #print(f"topics: {topics}")
+            return [topic.text.strip() for topic in topics] if topics else ["No topics"]
+            
+        except requests.RequestException as e:
+            print(f"Error fetching {full_url}: {e}")
+            return ["Error fetching topics"]
+    else:
+        return ["No topics found"]
 
-def transform(repos_html):
+
+def transform(repos_html, page_type="explore"):
     result=[]
     for r in repos_html:
         try:
-            #number_of_stars = ''.join(r.select_one('a[href$="/stargazers"]').text.split())
-            number_of_stars = convert_number(r.select_one('span.Counter.js-social-count').text.strip())
-
-            #number_of_stars = ''.join(r.select_one('span.repo-stars-counter-star').text.split())
-            #number_of_stars = 0
-            #number_of_stars = int(number_of_stars.replace(",",""))
-            topics = [a.get_text(strip=True) for a in r.select('a[href^="/topics/"]')]
-            #print(topics)
-            #stars_today = ''.join(r.select_one('span.float-sm-right').text.split())
-            #stars_today = stars_today.replace("starstoday", "")
-            #stars_today = stars_today.replace("starsthismonth", "")
-            #stars_today = stars_today.replace("starsthisweek", "")
-            #stars_today = int(stars_today.replace(",", ""))
-            #forks = ''.join(r.select_one('a[href$="/forks"]').text.split())
-            #forks = int(forks.replace(",",""))
-            #repository_name = ''.join(r.select_one('h2').text.split()) 
-            repository_name = ''.join(r.select_one('h3').text.split()) 
-            #developer_name = r.select_one('img.avatar.mb-1.avatar-user')['alt']
             language = r.select_one('span[itemprop="programmingLanguage"]').text.strip() if r.select_one('span[itemprop="programmingLanguage"]') else "Unknown"
-            #result.append({'Developer': developer_name, 'Repository Name': repository_name, 'Number of Stars': number_of_stars, 'Forks': forks, 'Stars Today': stars_today, 'Language': language})
-            result.append({'Repository Name': repository_name, 'Number of Stars': number_of_stars, 'Language': language, 'Topics': topics})
+            if page_type == "explore":
+                number_of_stars = convert_number(r.select_one('span.Counter.js-social-count').text.strip())
+                topics = [a.get_text(strip=True) for a in r.select('a[href^="/topics/"]')]
+                repository_name = ''.join(r.select_one('h3').text.split())
+                result.append({'Repository Name': repository_name, 'Number of Stars': number_of_stars, 'Language': language, 'Topics': topics})
+            else:
+
+                number_of_stars = ''.join(r.select_one('a[href$="/stargazers"]').text.split())
+                number_of_stars = int(number_of_stars.replace(",",""))
+                stars_today = ''.join(r.select_one('span.float-sm-right').text.split())
+                stars_today = stars_today.replace(f"stars{page_type}", "")
+                stars_today = int(stars_today.replace(",", ""))
+                forks = ''.join(r.select_one('a[href$="/forks"]').text.split())
+                forks = int(forks.replace(",",""))
+                repository_name = ''.join(r.select_one('h2').text.split()) 
+                developer_name = r.select_one('img.avatar.mb-1.avatar-user')['alt']
+                try:
+                    repo_link = r.select_one('h2 a')['href'] if r.select_one('h2 a') else None
+                    topics = get_topics(repo_link)
+                except Exception as e:
+                    print(f"Error getting repo link topics: {e}")
+                    topics = None
+                result.append({'Developer': developer_name, 'Repository Name': repository_name, 'Number of Stars': number_of_stars, 'Forks': forks, 'Stars Today': stars_today, 'Language': language, 'Topics': topics})
         except Exception as e:
             print(f"Error processing result due to {e}.")
     return result
@@ -72,17 +100,18 @@ def out_to_csv(repository_data, filename):
 
 
 def main():
-    url = "https://github.com/trending"
-    url = "https://github.com/trending?since=monthly"
+    #url = "https://github.com/trending"
+    #url = "https://github.com/trending?since=monthly"
     url = "https://github.com/trending?since=weekly"
-    url = "https://github.com/explore"
+    #url = "https://github.com/explore"
     page = request_github_tranding(url)
     repos_html = extract(page)
     #print(repos_html)
-    repo_data = transform(repos_html)
+    #types for transfom: 'explore', 'today', 'thisweek', 'thismonth'
+    repo_data = transform(repos_html, "thisweek")
     #print(repo_data)
     print(format(repo_data))
-    out_to_csv(repo_data, "explore.csv")
+    out_to_csv(repo_data, "trending_week.csv")
 
 if __name__ == "__main__":
     main()

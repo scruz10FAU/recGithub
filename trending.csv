@@ -1,21 +1,20 @@
-Developer,Repository Name,Number of Stars,Forks,Stars Today,Language
-@zealoushacker,anthropics/claude-cookbooks,23438,2410,1306,Jupyter Notebook
-@nekohasekai,SagerNet/sing-box,27350,3192,52,Go
-@ROBERT-MCDOWELL,DrewThomasson/ebook2audiobook,12451,944,324,Python
-@x1xhlol,x1xhlol/system-prompts-and-models-of-ai-tools,92217,25008,235,Unknown
-@aliberts,huggingface/lerobot,18268,2797,88,Python
-@esimkowitz,wavetermdev/waveterm,12189,489,201,Go
-@karpathy,karpathy/micrograd,13157,1954,115,Jupyter Notebook
-@nsarrazin,huggingface/chat-ui,9588,1463,224,TypeScript
-@cclauss,TheAlgorithms/Python,211612,48844,234,Python
-@lfnovo,lfnovo/open-notebook,6148,621,531,TypeScript
-@Anuken,Anuken/Mindustry,25118,3237,48,Java
-@wintonzheng,Skyvern-AI/skyvern,14954,1272,220,Python
-@LDOUBLEV,PaddlePaddle/PaddleOCR,59506,9012,713,Python
-@Centril,clockworklabs/SpacetimeDB,17923,625,160,Rust
-@dhh,basecamp/omarchy,15038,1371,191,Shell
-@BurntSushi,BurntSushi/ripgrep,56470,2270,63,Rust
-@gschier,mountain-loop/yaak,8864,315,433,TypeScript
-@traviscibot,tokio-rs/tokio,29896,2802,44,Rust
-@vhf,EbookFoundation/free-programming-books,373877,64959,507,Python
-@he3als,Atlas-OS/Atlas,17349,619,97,PowerShell
+Developer,Repository Name,Number of Stars,Forks,Stars Today,Language,Topics
+@gschier,mountain-loop/yaak,10228,358,651,TypeScript,"['graphql', 'http', 'websocket', 'grpc', 'http-client', 'sse', 'tauri', 'postman-alternative', 'insomnia-alternative', 'bruno-alternative']"
+@louislam,louislam/uptime-kuma,76456,6776,178,JavaScript,"['docker', 'monitor', 'monitoring', 'responsive', 'single-page-app', 'websocket', 'socket-io', 'selfhosted', 'self-hosted', 'uptime', 'webapp', 'uptime-monitoring']"
+@lfnovo,lfnovo/open-notebook,6727,681,483,TypeScript,"['learning', 'notebook', 'assistant', 'note-taking', 'self-learning', 'notes-app']"
+@ROBERT-MCDOWELL,DrewThomasson/ebook2audiobook,12884,975,476,Python,"['multilingual', 'windows', 'linux', 'docker', 'mac', 'kaggle', 'audiobook', 'tts', 'english', 'epub', 'chinese', 'gradio', 'audiobooks', 'colab-notebook', 'voice-cloning', 'xtts']"
+@zealoushacker,anthropics/claude-cookbooks,24313,2455,1405,Jupyter Notebook,['No topics']
+@sharkdp,sharkdp/bat,55313,1381,92,Rust,"['git', 'syntax-highlighting', 'rust', 'cli', 'terminal', 'command-line', 'tool', 'hacktoberfest']"
+@wintonzheng,Skyvern-AI/skyvern,15128,1282,188,Python,"['python', 'api', 'workflow', 'automation', 'browser', 'computer', 'vision', 'gpt', 'browser-automation', 'rpa', 'playwright', 'llm']"
+@hnwyllmm,oceanbase/miniob,4099,1479,39,C++,"['training', 'classroom', 'education', 'database', 'cplusplus', 'mini-database', 'hackertoberfest', 'learn-to-database']"
+@csukuangfj,k2-fsa/sherpa-onnx,7912,912,16,C++,"['android', 'windows', 'macos', 'linux', 'lazarus', 'raspberry-pi', 'ios', 'text-to-speech', 'csharp', 'cpp', 'dotnet', 'speech-to-text', 'aarch64', 'mfc', 'risc-v', 'object-pascal', 'asr', 'arm32', 'onnx', 'vits']"
+@emilio,servo/servo,32456,3289,507,Rust,"['rust', 'browser', 'web', 'servo', 'webbrowser', 'webplatform', 'webengine']"
+@wwwillchen,dyad-sh/dyad,16502,1793,80,TypeScript,"['github', 'react', 'typescript', 'nextjs', 'artificial-intelligence', 'gemini', 'openai', 'bolt', 'v0', 'lovable', 'vercel', 'llm', 'llms', 'generative-ai', 'anthropic', 'ollama', 'qwen', 'deepseek', 'ai-app-builder']"
+@Anuken,Anuken/Mindustry,25289,3241,186,Java,"['android', 'game', 'java', 'desktop', 'tower-defense', 'mobile-game', 'multiplatform', 'rts', 'sandbox-game', 'mindustry']"
+@LDOUBLEV,PaddlePaddle/PaddleOCR,60043,9049,571,Python,"['ocr', 'pdf-parser', 'kie', 'document-translation', 'rag', 'chineseocr', 'ai4science', 'pp-ocr', 'document-parsing', 'pp-structure', 'pdf-extractor-rag', 'pdf2markdown']"
+@nsarrazin,huggingface/chat-ui,9763,1473,190,TypeScript,"['typescript', 'svelte', 'hacktoberfest', 'tailwindcss', 'huggingface', 'svelte-kit', 'sveltekit', 'llm', 'chatgpt']"
+@vhf,EbookFoundation/free-programming-books,374324,65022,430,Python,"['education', 'list', 'books', 'resource', 'hacktoberfest']"
+@wdhdev,is-a-dev/register,8746,15675,48,JavaScript,"['dns', 'github-pages', 'website', 'oss', 'foss', 'domain', 'dev', 'cloudflare', 'subdomain', 'developer', 'free', 'free-domain', 'free-for-developers', 'free-for-dev']"
+@jaywcjlove,jaywcjlove/awesome-mac,90568,6867,421,JavaScript,"['desktop-app', 'macos', 'mac', 'application', 'app', 'list', 'apple', 'awesome', 'apps', 'desktop-application', 'software', 'macosx', 'awesome-list', 'mac-osx', 'desktop-apps', 'awesome-lists', 'macos-app', 'macos-apps', 'awesome-mac']"
+@Centril,clockworklabs/SpacetimeDB,18073,631,166,Rust,"['database', 'smart-contracts', 'game-development', 'relational-database', 'relational', 'dataoriented']"
+@profvjreddi,harvard-edge/cs249r_book,3951,434,250,Python,"['machine-learning', 'deep-learning', 'artificial-intelligence', 'textbook', 'courseware', 'computer-systems', 'edge-machine-learning', 'machine-learning-systems', 'tinyml', 'cloud-ml', 'embedded-ml', 'mobile-ml']"

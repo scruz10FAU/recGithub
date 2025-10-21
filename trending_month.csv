@@ -1,22 +1,24 @@
-Developer,Repository Name,Number of Stars,Forks,Stars Today,Language
-@harry0703,harry0703/MoneyPrinterTurbo,46811,6548,6972,Python
-@LeiWang1999,tile-ai/tilelang,3651,270,2006,C++
-@CloudsOfChange,anthropics/prompt-eng-interactive-tutorial,24687,2260,6216,Jupyter Notebook
-@dexhorthy,humanlayer/humanlayer,6282,482,3760,TypeScript
-@TibixDev,TibixDev/winboat,12618,316,7977,TypeScript
-@treoden,evershopcommerce/evershop,7979,1943,2192,TypeScript
-@Paul-Licameli,audacity/audacity,15634,2452,1457,C++
-@CarsonRoscoe,coinbase/x402,2253,339,1223,TypeScript
-@zealoushacker,anthropics/claude-cookbooks,23440,2410,1684,Jupyter Notebook
-@vhf,EbookFoundation/free-programming-books,373877,64959,5156,Python
-@WECENG,WECENG/ticket-purchase,5218,642,3095,Python
-@jatZama,zama-ai/fhevm,24688,1230,4965,Rust
-@SoilZhu,Gar-b-age/CookLikeHOC,21468,2134,14546,JavaScript
-@laanwj,bitcoin/bitcoin,86314,38055,842,C++
-@Dhravya,supermemoryai/supermemory,12531,1309,1608,TypeScript
-@cclauss,TheAlgorithms/Python,211613,48844,3914,Python
-@actions-user,anthropics/claude-code,39695,2527,6016,TypeScript
-@kamranahmedse,kamranahmedse/developer-roadmap,341479,43178,5021,TypeScript
-@manucorporat,gin-gonic/gin,86605,8463,2690,Go
-@SkalskiP,roboflow/rf-detr,3730,425,705,Python
-@YaLTeR,YaLTeR/niri,13811,485,2378,Rust
+Developer,Repository Name,Number of Stars,Forks,Stars Today,Language,Topics
+@harry0703,harry0703/MoneyPrinterTurbo,46890,6557,7056,Python,"['python', 'automation', 'ai', 'moviepy', 'shortvideo', 'tiktok', 'chatgpt']"
+@LeiWang1999,tile-ai/tilelang,3674,273,2023,C++,['No topics']
+@CloudsOfChange,anthropics/prompt-eng-interactive-tutorial,24804,2262,6334,Jupyter Notebook,['No topics']
+@dexhorthy,humanlayer/humanlayer,6326,485,3789,TypeScript,"['ai', 'amp', 'opencode', 'agents', 'codex', 'human-in-the-loop', 'llm', 'llms', 'humanlayer', 'claude-code']"
+@TibixDev,TibixDev/winboat,12885,322,8062,TypeScript,"['windows', 'linux', 'docker', 'docker-compose', 'virtualization', 'rdp']"
+@treoden,evershopcommerce/evershop,8091,1954,2293,TypeScript,"['react', 'ecommerce', 'shopping-cart', 'shop', 'reactjs', 'postgresql', 'expressjs', 'shopping', 'ecommerce-platform', 'e-commerce', 'cart', 'ecommerce-website', 'ecommerce-framework', 'react-template', 'ecommerce-template', 'shopping-app', 'e-commerce-project', 'react-ecommerce']"
+@zealoushacker,anthropics/claude-cookbooks,24314,2455,2941,Jupyter Notebook,['No topics']
+@Paul-Licameli,audacity/audacity,15664,2451,1474,C++,"['audio', 'editor', 'cross-platform', 'gplv2', 'wxwidgets-applications']"
+@CarsonRoscoe,coinbase/x402,2272,341,1231,TypeScript,['No topics']
+@vhf,EbookFoundation/free-programming-books,374325,65022,5351,Python,"['education', 'list', 'books', 'resource', 'hacktoberfest']"
+@jatZama,zama-ai/fhevm,24819,1268,4948,Rust,"['privacy', 'blockchain', 'fhe']"
+@cclauss,TheAlgorithms/Python,211766,48864,4012,Python,"['python', 'education', 'algorithm', 'practice', 'interview', 'sorting-algorithms', 'learn', 'algos', 'algorithm-competitions', 'sorts', 'hacktoberfest', 'algorithms-implemented', 'community-driven', 'searches']"
+@actions-user,anthropics/claude-code,39836,2545,6082,TypeScript,['No topics']
+@karpathy,karpathy/nanoGPT,47303,7944,2436,Python,['No topics']
+@laanwj,bitcoin/bitcoin,86331,38058,843,C++,"['c-plus-plus', 'cryptography', 'bitcoin', 'p2p', 'cryptocurrency']"
+@YaLTeR,YaLTeR/niri,13873,489,2402,Rust,"['rust', 'wayland-compositor', 'tiling-window-manager', 'wayland', 'smithay']"
+@alckasoc,simular-ai/Agent-S,7459,821,1185,Python,"['memory', 'planning', 'cua', 'ai-agents', 'grounding', 'computer-automation', 'mllm', 'retrieval-augmented-generation', 'in-context-reinforcement-learning', 'agent-computer-interface', 'gui-agents', 'computer-use', 'computer-use-agent']"
+@kamranahmedse,kamranahmedse/developer-roadmap,341616,43191,5046,TypeScript,"['computer-science', 'roadmap', 'python-roadmap', 'developer-roadmap', 'devops-roadmap', 'react-roadmap', 'frontend-roadmap', 'java-roadmap', 'backend-roadmap', 'go-roadmap', 'angular-roadmap', 'nodejs-roadmap', 'dba-roadmap', 'javascript-roadmap', 'vue-roadmap', 'blockchain-roadmap', 'qa-roadmap', 'software-architect-roadmap']"
+@rullzer,nextcloud/server,32998,4602,2238,PHP,"['javascript', 'open-source', 'php', 'enterprise', 'design', 'opensource', 'cloud', 'ux', 'nextcloud', 'owncloud', 'decentralized', 'sharing', 'file-sharing', 'collaboration', 'distributed', 'free-software', 'usability', 'self-hosting', 'federation', 'hacktoberfest']"
+@maidul98,Infisical/infisical,22949,1537,2897,TypeScript,"['go', 'cli', 'golang', 'open-source', 'security', 'postgres', 'typescript', 'vault', 'acme', 'secret-management', 'secrets', 'environment-variables', 'pki', 'node-js', 'security-tools', 'secrets-management', 'certificate-management', 'secret-scanning', 'secret-manager', 'private-ca']"
+@LarFii,HKUDS/RAG-Anything,9146,1044,3897,Python,"['retrieval-augmented-generation', 'multi-modal-rag']"
+@jdx,jdx/mise,20660,690,1293,Rust,['No topics']
+@tannerlinsley,TanStack/router,11827,1302,714,TypeScript,"['react', 'javascript', 'url', 'search', 'framework', 'typescript', 'router', 'state-management', 'ssr', 'routing', 'rpc', 'route', 'typesafe', 'fullstack', 'searchparams', 'server-functions']"

@@ -1,18 +1,19 @@
-Developer,Repository Name,Number of Stars,Forks,Stars Today,Language
-@CloudsOfChange,anthropics/prompt-eng-interactive-tutorial,24687,2260,5390,Jupyter Notebook
-@jingyaogong,jingyaogong/minimind,30735,3538,2894,Python
-@karpathy,karpathy/nanoGPT,47021,7903,1844,Python
-@qin-ctx,volcengine/MineContext,2287,124,1182,Python
-@davila7,davila7/claude-code-templates,8980,752,1475,JavaScript
-@pi0,nitrojs/nitro,9189,726,1300,TypeScript
-@crutkas,microsoft/PowerToys,124929,7431,692,C#
-@actions-user,anthropics/claude-code,39695,2527,2109,TypeScript
-@ljharb,nvm-sh/nvm,88472,9473,1111,Shell
-@lfnovo,lfnovo/open-notebook,6148,621,791,TypeScript
-@omarsar,dair-ai/Prompt-Engineering-Guide,64733,6733,1712,MDX
-@zealoushacker,anthropics/claude-cookbooks,23440,2410,1232,Jupyter Notebook
-@DHowett,microsoft/terminal,100653,8866,116,C++
-@imoneoi,sapientinc/HRM,11439,1662,438,Python
-@treoden,evershopcommerce/evershop,7979,1943,919,TypeScript
-@myhloli,opendatalab/MinerU,47016,3878,1082,Python
-@ShuaiBai623,QwenLM/Qwen3-VL,15173,1168,964,Jupyter Notebook
+Developer,Repository Name,Number of Stars,Forks,Stars Today,Language,Topics
+@jingyaogong,jingyaogong/minimind,30969,3564,3426,Python,"['artificial-intelligence', 'large-language-model']"
+@karpathy,karpathy/nanoGPT,47303,7944,1983,Python,['No topics']
+@CloudsOfChange,anthropics/prompt-eng-interactive-tutorial,24805,2262,4649,Jupyter Notebook,['No topics']
+@zealoushacker,anthropics/claude-cookbooks,24316,2455,2125,Jupyter Notebook,['No topics']
+@lfnovo,lfnovo/open-notebook,6728,681,1238,TypeScript,"['learning', 'notebook', 'assistant', 'note-taking', 'self-learning', 'notes-app']"
+@gschier,mountain-loop/yaak,10229,358,773,TypeScript,"['graphql', 'http', 'websocket', 'grpc', 'http-client', 'sse', 'tauri', 'postman-alternative', 'insomnia-alternative', 'bruno-alternative']"
+@davila7,davila7/claude-code-templates,9100,763,1245,JavaScript,"['claude', 'anthropic', 'anthropic-claude', 'claude-code']"
+@qin-ctx,volcengine/MineContext,2424,129,905,Python,"['electron', 'react', 'javascript', 'python', 'agent', 'typescript', 'memory', 'python3', 'embedding-models', 'rag', 'vector-database', 'vision-language-model', 'proactive-ai', 'context-engineering']"
+@karpathy,karpathy/micrograd,13270,1959,256,Jupyter Notebook,['No topics']
+@crutkas,microsoft/PowerToys,124989,7433,714,C#,"['windows', 'color-picker', 'command-palette', 'desktop', 'windows-10', 'keyboard-manager', 'windows-11', 'powertoys', 'fancyzones', 'microsoft-powertoys', 'powerrename']"
+@ljharb,nvm-sh/nvm,88489,9474,1117,Shell,"['nodejs', 'shell', 'bash', 'zsh', 'node', 'install', 'nvm', 'posix', 'lts', 'version-manager', 'node-js', 'posix-compliant', 'nvmrc']"
+@DHowett,microsoft/terminal,100682,8872,196,C++,"['windows', 'console', 'terminal', 'command-line', 'wsl', 'cmd', 'hacktoberfest', 'contributions-welcome', 'windows-console', 'good-first-issue', 'windows-terminal']"
+@pi0,nitrojs/nitro,9254,728,1244,TypeScript,['No topics']
+@alyssawilk,envoyproxy/envoy,26884,5115,194,C++,"['cats', 'cncf', 'corgis', 'cars', 'rocket-ships', 'more-cats', 'cats-over-dogs', 'nanoservices']"
+@omarsar,dair-ai/Prompt-Engineering-Guide,64911,6750,1680,MDX,"['agent', 'deep-learning', 'openai', 'language-model', 'agents', 'ai-agents', 'rag', 'prompt-engineering', 'llms', 'generative-ai', 'chatgpt']"
+@ShuaiBai623,QwenLM/Qwen3-VL,15247,1177,1010,Jupyter Notebook,['No topics']
+@emilio,servo/servo,32459,3289,387,Rust,"['rust', 'browser', 'web', 'servo', 'webbrowser', 'webplatform', 'webengine']"
+@imoneoi,sapientinc/HRM,11493,1667,473,Python,"['deep-learning', 'reasoning', 'large-language-models', 'brain-inspired-ai']"
