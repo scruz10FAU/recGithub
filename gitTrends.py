@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import argparse
+import os
 
 def request_github_tranding(url):
     return requests.get(url).text
@@ -98,20 +100,65 @@ def out_to_csv(repository_data, filename):
     df = pd.DataFrame(repository_data)
     df.to_csv(filename, index=False)
 
+def upsert_csv(repository_data, filename):
+    new_df = pd.DataFrame(repository_data)
 
-def main():
+    if os.path.exists(filename):
+        existing_df = pd.read_csv(filename)
+        key_col = existing_df.columns[1]
+        print(key_col)
+        combined = pd.concat([existing_df, new_df], ignore_index=True)
+        # keep the last occurrence of each key (new data wins)
+        combined = combined.drop_duplicates(subset=[key_col], keep="last")
+    else:
+        combined = new_df
+
+    combined.to_csv(filename, index=False)
+
+
+
+def main(url, page_type, outputcsv): 
     #url = "https://github.com/trending"
     #url = "https://github.com/trending?since=monthly"
-    url = "https://github.com/trending?since=weekly"
+    #url = "https://github.com/trending?since=weekly"
     #url = "https://github.com/explore"
     page = request_github_tranding(url)
     repos_html = extract(page)
     #print(repos_html)
     #types for transfom: 'explore', 'today', 'thisweek', 'thismonth'
-    repo_data = transform(repos_html, "thisweek")
+    repo_data = transform(repos_html, page_type)
     #print(repo_data)
     print(format(repo_data))
-    out_to_csv(repo_data, "trending_week.csv")
+    #out_to_csv(repo_data, outputcsv)
+    upsert_csv(repo_data, outputcsv)
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(
+                    prog='Scrape Github',
+                    description='scrapes github repos for information'
+                    )
+    
+    parser.add_argument("-w", action="store_const", const="thisweek", dest="page", help="Set page to this week")
+    parser.add_argument("-t", action="store_const", const="today", dest="page", help="Set page to today")
+    parser.add_argument("-m", action="store_const", const="thismonth", dest="page", help="Set page to this month")
+    parser.add_argument("-e", action="store_const", const="explore", dest="page", help="Set page to explore")
+    parser.set_defaults(page="explore")
+
+    args = parser.parse_args()
+    match args.page:
+        case "thisweek":
+            output = "trending_week.csv"
+            url = "https://github.com/trending?since=weekly"
+        case "thismonth":
+            output = "trending_month.csv"
+            url = "https://github.com/trending?since=monthly"
+        case "today":
+            output = "trending.csv"
+            url = "https://github.com/trending"
+        case _:
+            output = "explore.csv"
+            url = "https://github.com/explore"
+
+    print(url, args.page, output)
+    
+    main(url, args.page, output)

@@ -3,8 +3,6 @@ Developer,Repository Name,Number of Stars,Forks,Stars Today,Language,Topics
 @karpathy,karpathy/nanoGPT,47303,7944,1983,Python,['No topics']
 @CloudsOfChange,anthropics/prompt-eng-interactive-tutorial,24805,2262,4649,Jupyter Notebook,['No topics']
 @zealoushacker,anthropics/claude-cookbooks,24316,2455,2125,Jupyter Notebook,['No topics']
-@lfnovo,lfnovo/open-notebook,6728,681,1238,TypeScript,"['learning', 'notebook', 'assistant', 'note-taking', 'self-learning', 'notes-app']"
-@gschier,mountain-loop/yaak,10229,358,773,TypeScript,"['graphql', 'http', 'websocket', 'grpc', 'http-client', 'sse', 'tauri', 'postman-alternative', 'insomnia-alternative', 'bruno-alternative']"
 @davila7,davila7/claude-code-templates,9100,763,1245,JavaScript,"['claude', 'anthropic', 'anthropic-claude', 'claude-code']"
 @qin-ctx,volcengine/MineContext,2424,129,905,Python,"['electron', 'react', 'javascript', 'python', 'agent', 'typescript', 'memory', 'python3', 'embedding-models', 'rag', 'vector-database', 'vision-language-model', 'proactive-ai', 'context-engineering']"
 @karpathy,karpathy/micrograd,13270,1959,256,Jupyter Notebook,['No topics']
@@ -17,3 +15,23 @@ Developer,Repository Name,Number of Stars,Forks,Stars Today,Language,Topics
 @ShuaiBai623,QwenLM/Qwen3-VL,15247,1177,1010,Jupyter Notebook,['No topics']
 @emilio,servo/servo,32459,3289,387,Rust,"['rust', 'browser', 'web', 'servo', 'webbrowser', 'webplatform', 'webengine']"
 @imoneoi,sapientinc/HRM,11493,1667,473,Python,"['deep-learning', 'reasoning', 'large-language-models', 'brain-inspired-ai']"
+@awesomekling,LadybirdBrowser/ladybird,54697,2420,4794,C++,"['browser', 'browser-engine']"
+@guofei9987,guofei9987/blind_watermark,10534,1067,2863,Python,"['image-processing', 'watermark', 'watermark-image', 'blind-watermark']"
+@yeongpin,yeongpin/cursor-free-vip,39526,4805,2995,Python,"['automation', 'free', 'cursor', 'cursors', 'pro', 'cursor-ide', 'freetrial', 'cursorai', 'cursor-ai']"
+@ultmaster,microsoft/agent-lightning,4237,289,1883,Python,"['agent', 'reinforcement-learning', 'mlops', 'llm', 'agentic-ai']"
+@harshavardhana,minio/minio,57603,6400,1841,Go,"['go', 'kubernetes', 'cloud', 'storage', 's3', 'k8s', 'cloudnative', 'objectstorage', 'multi-cloud', 'cloudstorage', 'amazon-s3', 'multi-cloud-kubernetes']"
+@moondevonyt,moondevonyt/moon-dev-ai-agents,1835,971,869,Python,['No topics']
+@CarsonRoscoe,coinbase/x402,3480,570,1126,TypeScript,['No topics']
+@abdulfatir,amazon-science/chronos-forecasting,4093,464,242,Python,"['machine-learning', 'timeseries', 'time-series', 'transformers', 'artificial-intelligence', 'forecasting', 'pretrained-models', 'time-series-forecasting', 'huggingface', 'huggingface-transformers', 'foundation-models', 'large-language-models', 'llm']"
+@gschier,mountain-loop/yaak,14615,519,3244,TypeScript,"['graphql', 'http', 'websocket', 'grpc', 'http-client', 'sse', 'tauri', 'postman-alternative', 'insomnia-alternative', 'bruno-alternative']"
+@himself65,toeverything/AFFiNE,58689,3993,2207,TypeScript,"['electron', 'editor', 'markdown', 'rust', 'app', 'wiki', 'notes', 'table', 'rust-language', 'workspace', 'whiteboard', 'tableview', 'rust-lang', 'crdt', 'knowledge-base', 'notion', 'miro', 'notion-alternative']"
+@liyasthomas,hoppscotch/hoppscotch,76595,5376,1418,TypeScript,"['testing', 'api', 'graphql', 'http', 'vuejs', 'spa', 'tools', 'pwa', 'rest', 'vue', 'rest-api', 'websocket', 'http-client', 'api-client', 'developer-tools', 'api-rest', 'testing-tools', 'api-testing']"
+@ROBERT-MCDOWELL,DrewThomasson/ebook2audiobook,14210,1073,999,Python,"['multilingual', 'windows', 'linux', 'docker', 'mac', 'kaggle', 'audiobook', 'tts', 'english', 'epub', 'chinese', 'gradio', 'audiobooks', 'colab-notebook', 'voice-cloning', 'xtts']"
+@jakep-allenai,allenai/olmocr,15318,1169,518,Python,['No topics']
+@antfu,slidevjs/slidev,40981,1724,315,TypeScript,"['markdown', 'vue', 'presentation', 'slides', 'vite', 'vueuse']"
+@TheRobotStudio,TheRobotStudio/SO-ARM100,4177,345,824,Unknown,['No topics']
+@cjpais,cjpais/Handy,4806,298,1479,TypeScript,"['cross-platform', 'accessibility', 'speech-to-text', 'tauri-v2']"
+@lfnovo,lfnovo/open-notebook,9019,884,1807,TypeScript,"['learning', 'notebook', 'assistant', 'note-taking', 'self-learning', 'notes-app']"
+@cyyeh,Canner/WrenAI,12612,1313,291,TypeScript,"['agent', 'bigquery', 'charts', 'sql', 'postgresql', 'bedrock', 'business-intelligence', 'openai', 'spreadsheets', 'vertex', 'genbi', 'text-to-sql', 'rag', 'text2sql', 'duckdb', 'llm', 'anthropic', 'sqlai', 'text-to-chart']"
+@yuja,jj-vcs/jj,21753,769,413,Rust,"['git', 'cli', 'mercurial', 'vcs', 'jj', 'jujutsu']"
+@chrislusf,seaweedfs/seaweedfs,26738,2510,536,Go,"['kubernetes', 'distributed-systems', 'fuse', 'replication', 'cloud-drive', 's3', 'posix', 's3-storage', 'hdfs', 'distributed-storage', 'distributed-file-system', 'erasure-coding', 'object-storage', 'blob-storage', 'seaweedfs', 'hadoop-hdfs', 'tiered-file-system']"
