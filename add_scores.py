@@ -28,7 +28,7 @@ def add_genre_scores(csv_file, alpha=0.5, empty_only=False):
             if empty_only and repo_name not in empty_repos:
                 continue
             topics = row["Topics"]
-            feature_dict = classify_repo(repo_name)['scores']
+            feature_dict = classify_repo(repo_name, use_creds=True)['scores']
             topics_dict = score_repo_from_topics(topics)
             #print(feature_dict)
             #print(topics_dict)

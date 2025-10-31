@@ -116,28 +116,23 @@ def upsert_csv(repository_data, filename):
     combined.to_csv(filename, index=False)
 
 
-
 def main(url, page_type, outputcsv): 
-    #url = "https://github.com/trending"
-    #url = "https://github.com/trending?since=monthly"
-    #url = "https://github.com/trending?since=weekly"
-    #url = "https://github.com/explore"
+    #get the github page
     page = request_github_tranding(url)
+    #extract info from the page
     repos_html = extract(page)
-    #print(repos_html)
-    #types for transfom: 'explore', 'today', 'thisweek', 'thismonth'
+    #get the data from the repo
     repo_data = transform(repos_html, page_type)
-    #print(repo_data)
-    print(format(repo_data))
-    #out_to_csv(repo_data, outputcsv)
+    #add info to csv if it is not already there
     upsert_csv(repo_data, outputcsv)
 
 if __name__ == "__main__":
+    #create arg parser for command line
     parser = argparse.ArgumentParser(
                     prog='Scrape Github',
                     description='scrapes github repos for information'
                     )
-    
+    #create arguments for each website type
     parser.add_argument("-w", action="store_const", const="thisweek", dest="page", help="Set page to this week")
     parser.add_argument("-t", action="store_const", const="today", dest="page", help="Set page to today")
     parser.add_argument("-m", action="store_const", const="thismonth", dest="page", help="Set page to this month")
@@ -145,6 +140,7 @@ if __name__ == "__main__":
     parser.set_defaults(page="explore")
 
     args = parser.parse_args()
+    #set output & url for each page type
     match args.page:
         case "thisweek":
             output = "trending_week.csv"
@@ -159,6 +155,6 @@ if __name__ == "__main__":
             output = "explore.csv"
             url = "https://github.com/explore"
 
-    print(url, args.page, output)
-    
+    #print(url, args.page, output)
+    #run main function to extract info & write csv for pages
     main(url, args.page, output)
