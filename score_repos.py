@@ -7,8 +7,13 @@ import argparse
 import pandas as pd
 from genre_keywords import GENRE_KEYWORDS
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  # put your PAT in env var
+#print("Token loaded?", bool(GITHUB_TOKEN))
+
 
 def gh_get(url, accept="application/vnd.github.v3+json"):
     headers = {"Accept": accept}
@@ -18,7 +23,7 @@ def gh_get(url, accept="application/vnd.github.v3+json"):
     return r
 
 
-def score_repo_from_topics(topics_str):
+def score_repo_from_topics(topics_str, normalize=False):
     # normalize topics into a list of tokens
     if isinstance(topics_str, list):
         topics_list = topics_str
@@ -51,19 +56,24 @@ def score_repo_from_topics(topics_str):
                     raw_scores[genre] += 1
 
     # normalize scores 0..1 per repo so the highest genre = 1.0
-    if raw_scores:
-        max_score = max(raw_scores.values())
-        if max_score == 0:
-            norm_scores = {g: 0.0 for g in GENRE_KEYWORDS.keys()}
+    if normalize:
+        if raw_scores:
+            max_score = max(raw_scores.values())
+            if max_score == 0:
+                norm_scores = {g: 0.0 for g in GENRE_KEYWORDS.keys()}
+            else:
+                norm_scores = {
+                    g: (raw_scores.get(g, 0) / max_score)
+                    for g in GENRE_KEYWORDS.keys()
+                }
         else:
-            norm_scores = {
-                g: (raw_scores.get(g, 0) / max_score)
-                for g in GENRE_KEYWORDS.keys()
-            }
-    else:
-        norm_scores = {g: 0.0 for g in GENRE_KEYWORDS.keys()}
+            norm_scores = {g: 0.0 for g in GENRE_KEYWORDS.keys()}
 
-    return norm_scores
+        return norm_scores
+    if raw_scores:
+        return raw_scores
+    else:
+        return {g: 0.0 for g in GENRE_KEYWORDS.keys()}
 
 def get_repo_readme(owner, repo, use_creds=False):
     #fetch github repo
@@ -73,8 +83,8 @@ def get_repo_readme(owner, repo, use_creds=False):
         r = gh_get(url)
     else:
         r = requests.get(url, headers={"Accept": "application/vnd.github.v3+json"})
-        
     if r.status_code != 200:
+        print("WARN readme", url, r.status_code, r.text[:120])
         return ""
     data = r.json()
     if "content" in data and data.get("encoding") == "base64":
@@ -89,6 +99,7 @@ def get_repo_file_tree(owner, repo, use_creds=False):
     else:
         r = requests.get(url)
     if r.status_code != 200:
+        print("WARN tree", url, r.status_code, r.text[:120])
         return []
     data = r.json()
     tree = data.get("tree", [])
@@ -116,18 +127,22 @@ def normalize_scores(raw_scores):
     max_score = max(raw_scores.values()) or 1
     return {genre: score / max_score for genre, score in raw_scores.items()}
 
-def classify_repo(owner_repo, use_creds=False):
+def classify_repo(owner_repo, use_creds=False, normalize=False):
     owner, repo = owner_repo.split("/", 1)
 
     readme_text = get_repo_readme(owner, repo, use_creds)
     file_paths = get_repo_file_tree(owner, repo, use_creds)
 
-    print("DEBUG", owner_repo)
-    print("  readme_len:", len(readme_text))
-    print("  num_file_paths:", len(file_paths))
+    #print("DEBUG", owner_repo)
+    #print("  readme_len:", len(readme_text))
+    #print("  num_file_paths:", len(file_paths))
 
     raw_scores = score_genres(readme_text, file_paths)
-    norm_scores = normalize_scores(raw_scores)
+    if normalize:
+        norm_scores = normalize_scores(raw_scores)
+    else:
+        norm_scores = raw_scores
+
 
     # Pick top genre
     top_genre = max(norm_scores, key=norm_scores.get) if norm_scores else None
@@ -143,9 +158,12 @@ def classify_repo(owner_repo, use_creds=False):
     }
 
 def main():
-    df = pd.read_csv("combined.csv")
+    #df = pd.read_csv("combined.csv")
+    GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
     repo_name = "iam-veeramalla/aws-devops-zero-to-hero"
-    result = classify_repo(repo_name, use_creds=True)
+    print("Token loaded?", bool(GITHUB_TOKEN))
+
+    result = classify_repo(repo_name, use_creds=True, normalize=False)
     print(repo_name)
     print(result["top_genre"])
     print(result["scores"])

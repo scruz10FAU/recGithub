@@ -381,3 +381,11 @@ GENRE_KEYWORDS["Security / Networking"] += [
     "web3", "onchain", "on-chain",
     "http-402", "402-payment-required"
 ]
+
+
+score_cols = [
+    "AI / Data / ML", "Systems / Embedded / Robotics", "Web / Mobile / Application Development", 
+    "DevOps / Infrastructure / Cloud", "Security / Networking", "Data Platforms / Backend Services / Integrations", 
+    "CLI / Utilities / Developer Tools", "Libraries / SDKs / Framework Components", "Research / Experiments / Demos", 
+    "Education / Tutorials / Docs"
+    ]

@@ -1,21 +1,27 @@
-from score_repos import classify_repo, score_repo_from_topics
+from score_repos import classify_repo, score_repo_from_topics, normalize_scores
 import pandas as pd
 import os
 import re
 from collections import defaultdict
 
 
-def blend_scores(content_scores, topic_scores, alpha=0.7):
+def blend_scores(content_scores, topic_scores, alpha=0.7, normalized=False):
     # ensure every genre exists in both dicts
     final = {}
     for genre in content_scores.keys():
         c = content_scores.get(genre, 0.0)
         t = topic_scores.get(genre, 0.0)
-        if c > 0 and t > 0:
-            final[genre] = alpha * c + (1 - alpha) * t
+        if normalized:
+            if c > 0 and t > 0:
+                final[genre] = alpha * c + (1 - alpha) * t
+            else:
+                final[genre] = max(c, t)
+            return final
         else:
-            final[genre] = max(c, t)
-    return final
+            final[genre] = c + t
+    if not normalized:
+        max_val = max(final.values()) or 1
+        return {genre: val / max_val for genre, val in final.items()}
 
 def add_genre_scores(csv_file, alpha=0.5, empty_only=False):
     empty_repos = ['karpathy/micrograd', 'nitrojs/nitro', 'QwenLM/Qwen3-VL', 'allenai/olmocr', 'TheRobotStudio/SO-ARM100', 'anthropics/claude-cookbooks', 'allenai/olmocr', 'iam-veeramalla/aws-devops-zero-to-hero'] 
@@ -58,7 +64,7 @@ def add_genre_scores(csv_file, alpha=0.5, empty_only=False):
 
 def main():
 
-    add_genre_scores("combined.csv", empty_only=True)
+    add_genre_scores("combined.csv", empty_only=False)
 
 
 if __name__ == "__main__":

@@ -1,13 +1,8 @@
 import pandas as pd
+from genre_keywords import score_cols
 
 csv = "combined.csv"
 df = pd.read_csv(csv)
-score_cols = [
-    "AI / Data / ML", "Systems / Embedded / Robotics", "Web / Mobile / Application Development", 
-    "DevOps / Infrastructure / Cloud", "Security / Networking", "Data Platforms / Backend Services / Integrations", 
-    "CLI / Utilities / Developer Tools", "Libraries / SDKs / Framework Components", "Research / Experiments / Demos", 
-    "Education / Tutorials / Docs"
-    ]
 
 zero_mask = (df[score_cols] == 0).all(axis=1)
 
