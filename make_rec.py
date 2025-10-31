@@ -41,7 +41,7 @@ def get_repo_scores(df, repo_list, ratings=None):
     max_val = max(total_scores)
     return {genre: val / max_val for genre, val in total_scores.items()}
 
-def plot_scores_dist(repos, scores, ratings=None):
+def plot_scores_dist(repos, scores, ratings=None, recs=None):
     pretty_index = [label.replace(" / ", "\n") for label in scores.keys()]
     repo_label = ""
     print(repos)
@@ -52,16 +52,59 @@ def plot_scores_dist(repos, scores, ratings=None):
     weights_string = ""
     if ratings is not None:
         weights_string += "with weights"
-
-    plt.figure(figsize=(10,6))
-    plt.bar(pretty_index, scores.values())
-    plt.xlabel("Genre")
-    plt.ylabel("Genre Weight Based on Selection")
-    plt.title(f"Weight of Each Genre Based on Repos Selected {weights_string} {repo_label}")
-    plt.xticks(rotation=45, ha="right")
+    
+    fig, ax = plt.subplots()
+    
+        
+        
+    ax.bar(pretty_index, scores.values())
+    ax.set_xlabel("Genre")
+    ax.set_ylabel("Genre Weight Based on Selection")
+    ax.set_title(f"Weight of Each Genre Based on Repos Selected {weights_string} {repo_label}")
+    ax.set_xticklabels(pretty_index, rotation=45, ha="right")
+    
+    if recs is not None:
+        box = ax.get_position()
+        ax.set_position([box.x0, box.y0, box.width * 0.95, box.height])
+        rec_text = "Your recommendations are: "
+        for rec in recs:
+            rec_text += "\n " + str(rec)
+        ax.text(
+            1.02, 0.5,
+            rec_text,
+            transform=ax.transAxes,
+            ha="left",
+            va="center",
+            fontsize=10
+        )
 
     plt.tight_layout()
     plt.show()
+    
+
+
+def add_user_match_score(df, weight_dict, input_repos, repo_col="Repository Name"):
+    #remove input from repo list
+    df = df.copy()
+    mask = ~df[repo_col].isin(input_repos)
+    df = df[mask]
+
+    # genres we will actually use = intersection of df columns and weight_dict keys
+    genre_cols = [g for g in weight_dict.keys() if g in df.columns]
+
+    # build weight vector aligned with genre_cols
+    w = np.array([weight_dict[g] for g in genre_cols])
+
+    # matrix of repo scores for those genres
+    M = df[genre_cols].values  # shape: (num_repos, num_genres)
+
+    #weighted dot product per repo added to dataframe
+    df["user_match_score"] = M.dot(w)
+
+    # sort best -> worst
+    df_sorted = df.sort_values("user_match_score", ascending=False)
+
+    return df_sorted, genre_cols
     
 
 def main():
@@ -70,6 +113,9 @@ def main():
     #Choose 3 repo names randomly for recommendation
     rec_input = []
     ratings = []
+    print("Welcome to the repository recommendation system.")
+    print("Based on your preferences, This program will recommend a repository for you to explore.")
+    num_recs = int(input("Number of repos to recommended: "))
     choose_repo = input("Enter repos you like (else random)? Enter y or n: ")
     if choose_repo == "y":
         rate_repos = input("Do you want to rate repos? Enter y or n: ")
@@ -94,7 +140,12 @@ def main():
     print(rec_input)
     scores = get_repo_scores(df, rec_input, ratings=ratings)
     print(scores)
-    plot_scores_dist(rec_input, scores, ratings=ratings)
+    get_recs = add_user_match_score(df, scores, rec_input)
+    df_recs = get_recs[0].head(num_recs)
+    rec_names = df_recs["Repository Name"].tolist()
+    print(f"Your recommendations are {rec_names}.")
+
+    plot_scores_dist(rec_input, scores, ratings=ratings, recs=rec_names)
 
 if __name__ == "__main__":
     main()
