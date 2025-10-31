@@ -20,7 +20,7 @@ def blend_scores(content_scores, topic_scores, alpha=0.7, normalized=False):
         else:
             final[genre] = c + t
     if not normalized:
-        max_val = max(final.values()) or 1
+        max_val = max(final.values())
         return {genre: val / max_val for genre, val in final.items()}
 
 def add_genre_scores(csv_file, alpha=0.5, empty_only=False):
