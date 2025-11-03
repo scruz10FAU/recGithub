@@ -61,7 +61,9 @@ def plot_scores_dist(repos, scores, ratings=None, recs=None):
     ax.set_xlabel("Genre")
     ax.set_ylabel("Genre Weight Based on Selection")
     ax.set_title(f"Weight of Each Genre Based on Repos Selected {weights_string} {repo_label}")
-    ax.set_xticklabels(pretty_index, rotation=45, ha="right")
+    ax.set_xticklabels(pretty_index, rotation=45, ha="right", fontsize=8, linespacing=1)
+    fig.set_size_inches(8, 6)     # wider figure
+    fig.subplots_adjust(bottom=0.28)  # extra bottom margin for labels
     
     if recs is not None:
         box = ax.get_position()
@@ -117,8 +119,8 @@ def main():
     print("Based on your preferences, This program will recommend a repository for you to explore.")
     num_recs = int(input("Number of repos to recommended: "))
     choose_repo = input("Enter repos you like (else random)? Enter y or n: ")
+    rate_repos = input("Do you want to rate repos? Enter y or n: ")
     if choose_repo == "y":
-        rate_repos = input("Do you want to rate repos? Enter y or n: ")
         num_repos = int(input("Number of repos to input: "))
         print(f"You will enter {num_repos}")
 
@@ -132,18 +134,24 @@ def main():
             ratings = None
     else:
         rec_input = df.sample(n=3)["Repository Name"].to_list()
-        ratings=None
+        if rate_repos == "y":
+            for rec in rec_input:
+                rating = int(input(f"Enter a rating score from 1-10 for the repo {rec}: "))
+                ratings.append(rating)
+        else:
+            ratings=None
 
     
     #ratings = None
     #rec_input = ["scruz10FAU/ShellHacks2025", "k2-fsa/sherpa-onnx", "dyad-sh/dyad"]
     print(rec_input)
-    scores = get_repo_scores(df, rec_input, ratings=ratings)
+    scores = get_repo_scores(df.copy(), rec_input, ratings=ratings)
     print(scores)
-    get_recs = add_user_match_score(df, scores, rec_input)
+    get_recs = add_user_match_score(df.copy(), scores, rec_input)
     df_recs = get_recs[0].head(num_recs)
     rec_names = df_recs["Repository Name"].tolist()
-    print(f"Your recommendations are {rec_names}.")
+    rec_scores = df_recs["user_match_score"].tolist()
+    print(f"Your recommendations are {rec_names}, {rec_scores}")
 
     plot_scores_dist(rec_input, scores, ratings=ratings, recs=rec_names)
 

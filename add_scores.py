@@ -55,7 +55,7 @@ def add_genre_scores(csv_file, alpha=0.5, empty_only=False):
                 print(f"Completed {idx+1}/{len(df)}")
 
 
-        df.to_csv(csv_file)
+        df.to_csv(csv_file, index=False)
     else:
         print("File does not exist")
         return None
