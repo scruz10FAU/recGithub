@@ -64,7 +64,7 @@ def add_genre_scores(csv_file, alpha=0.5, empty_only=False):
 
 def main():
 
-    add_genre_scores("combined.csv", empty_only=False)
+    add_genre_scores("assets/combined.csv", empty_only=False)
 
 
 if __name__ == "__main__":

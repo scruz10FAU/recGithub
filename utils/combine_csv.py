@@ -17,8 +17,8 @@ def combine_csv(csv_list, output_csv):
     df.to_csv(output_csv, index=False)
 
 def main():
-    csv_files = ["trending.csv", "trending_month.csv", "trending_week.csv", "explore.csv"]
-    combine_csv(csv_files, "combined.csv")
+    csv_files = ["assets/trending.csv", "assets/trending_month.csv", "assets/trending_week.csv", "assets/explore.csv"]
+    combine_csv(csv_files, "assets/combined.csv")
 
 if __name__ == "__main__":
     main()

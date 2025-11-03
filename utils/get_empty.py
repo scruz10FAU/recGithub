@@ -1,7 +1,7 @@
 import pandas as pd
 from genre_keywords import score_cols
 
-csv = "combined.csv"
+csv = "assets/combined.csv"
 df = pd.read_csv(csv)
 
 zero_mask = (df[score_cols] == 0).all(axis=1)

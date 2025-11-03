@@ -143,16 +143,16 @@ if __name__ == "__main__":
     #set output & url for each page type
     match args.page:
         case "thisweek":
-            output = "trending_week.csv"
+            output = "assets/trending_week.csv"
             url = "https://github.com/trending?since=weekly"
         case "thismonth":
-            output = "trending_month.csv"
+            output = "assets/trending_month.csv"
             url = "https://github.com/trending?since=monthly"
         case "today":
-            output = "trending.csv"
+            output = "assets/trending.csv"
             url = "https://github.com/trending"
         case _:
-            output = "explore.csv"
+            output = "assets/explore.csv"
             url = "https://github.com/explore"
 
     #print(url, args.page, output)
