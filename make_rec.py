@@ -1,8 +1,4 @@
-import random
 import pandas as pd
-from helpers.genre_keywords import score_cols
-import matplotlib.pyplot as plt
-import numpy as np
 from utils.utils import classify_repo, score_repo_from_topics, normalize_scores, blend_scores
 from utils.utils import get_repo_scores, add_user_match_score, plot_scores_dist
 

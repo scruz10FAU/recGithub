@@ -6,9 +6,9 @@ import requests
 import base64
 import pandas as pd
 import numpy as np
-from genre_keywords import GENRE_KEYWORDS
+from utils.genre_keywords import GENRE_KEYWORDS
 from dotenv import load_dotenv
-from genre_keywords import score_cols
+from utils.genre_keywords import score_cols
 import matplotlib.pyplot as plt
 
 load_dotenv()
