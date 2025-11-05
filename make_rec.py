@@ -1,6 +1,7 @@
 import pandas as pd
+import sys
 from utils.utils import classify_repo, score_repo_from_topics, normalize_scores, blend_scores
-from utils.utils import get_repo_scores, add_user_match_score, plot_scores_dist, get_starred_repos
+from utils.utils import get_repo_scores, add_user_match_score, plot_scores_dist, get_starred_repos, error_check
 
 
 def main():
@@ -12,18 +13,24 @@ def main():
     print("Welcome to the repository recommendation system.")
     print("Based on your preferences, This program will recommend a repository for you to explore.")
     github_username = input("What is your github username?: ")
-    num_recs = int(input("Number of repos to recommended: "))
+    num_recs = input("Number of repos to recommended: ")
+    num_recs = error_check(num_recs, user_type="int", user_min=1, user_max=10)
     choose_repo = input("Choose input mode. Enter r for random, i for custom input, s for starred : ")
+    choose_repo = error_check(choose_repo, ["r", "i", "s"])
     rate_repos = input("Do you want to rate repos? Enter y or n: ")
+    rate_repos = error_check(rate_repos, choices=["y", "n"])
     if choose_repo == "i":
-        num_repos = int(input("Number of repos to input: "))
+        num_repos = input("Number of repos to input: ")
+        num_repos = error_check(num_repos, user_type="int", user_min=1, user_max=10)
         print(f"You will enter {num_repos}")
 
         for i in range(num_repos):
             repo = input("Enter repo in the form 'x/y': ")
+            repo = error_check(repo, user_type="repo")
             rec_input.append(repo)
             if rate_repos == "y":
-                rating = int(input("Enter a rating score from 1-10: "))
+                rating = input("Enter a rating score from 1-10: ")
+                rating = error_check(rating, user_type="int", user_min=1, user_max=10)
                 ratings.append(rating)
         if rate_repos != "y":
             ratings = None
@@ -35,7 +42,8 @@ def main():
             rec_input = df.sample(n=3)["Repository Name"].to_list()
         if rate_repos == "y":
             for rec in rec_input:
-                rating = int(input(f"Enter a rating score from 1-10 for the repo {rec}: "))
+                rating = input(f"Enter a rating score from 1-10 for the repo {rec}: ")
+                rating = error_check(rating, user_type="int", user_min=1, user_max=10)
                 ratings.append(rating)
         else:
             ratings=None

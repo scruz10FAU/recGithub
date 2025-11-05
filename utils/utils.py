@@ -10,6 +10,7 @@ from utils.genre_keywords import GENRE_KEYWORDS
 from dotenv import load_dotenv
 from utils.genre_keywords import score_cols
 import matplotlib.pyplot as plt
+import sys
 
 load_dotenv()
 
@@ -150,6 +151,42 @@ def get_repo_file_tree(owner, repo, use_creds=False):
     data = r.json()
     tree = data.get("tree", [])
     return [item["path"] for item in tree if item["type"] == "blob"]
+
+def error_check(user_input, choices=["y", "n"], user_type="str", user_min=0, user_max=10, tries=3):
+    attempt = 0
+    while attempt < tries:
+        if user_type == "str":
+            user_input = user_input.lower()
+            if user_input in choices:
+                return user_input
+            else:
+                user_input = input(f"Select an option from {choices}: ")
+                attempt += 1
+        elif user_type == "int":
+            if user_input.isnumeric():
+                user_input = int(user_input)
+                if user_min <= user_input <= user_max:
+                    return user_input
+                else:
+                    user_input = input(f"Enter an integer between {user_min} and {user_max}: ")
+                    attempt+=1
+            else:
+                user_input = input(f"Enter an integer between {user_min} and {user_max}: ")
+                attempt += 1
+        elif user_type == "repo":
+            pattern = r"^[^/]*\/[^/]*$"
+            if bool(re.fullmatch(pattern, user_input)):
+                return user_input
+            else:
+                user_input = input("Enter repos in the form 'x/y': ")
+                attempt+=1
+
+    print("Invalid input. Ending program.....")
+    sys.exit(1)
+            
+
+
+    
 
 def score_genres(text_blob, file_paths):
     genre_scores = defaultdict(int)
