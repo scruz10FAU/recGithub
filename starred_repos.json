@@ -1,0 +1,26 @@
+[
+  {
+    "name": "stereolabs/zed-sdk",
+    "url": "https://github.com/stereolabs/zed-sdk",
+    "description": "\u26a1\ufe0fThe spatial perception framework for rapidly building smart robots and spaces",
+    "stars": 1016,
+    "language": "C++",
+    "updated_at": "2025-11-05T15:13:49Z"
+  },
+  {
+    "name": "NVIDIA-ISAAC-ROS/isaac_ros_common",
+    "url": "https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common",
+    "description": "Common utilities, packages, scripts, Dockerfiles, and testing infrastructure for Isaac ROS packages.",
+    "stars": 270,
+    "language": "C++",
+    "updated_at": "2025-11-05T15:12:48Z"
+  },
+  {
+    "name": "stereolabs/zed-ros2-wrapper",
+    "url": "https://github.com/stereolabs/zed-ros2-wrapper",
+    "description": "ROS 2 wrapper for the ZED SDK",
+    "stars": 252,
+    "language": "C++",
+    "updated_at": "2025-11-05T15:11:23Z"
+  }
+]

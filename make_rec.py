@@ -1,6 +1,6 @@
 import pandas as pd
 from utils.utils import classify_repo, score_repo_from_topics, normalize_scores, blend_scores
-from utils.utils import get_repo_scores, add_user_match_score, plot_scores_dist
+from utils.utils import get_repo_scores, add_user_match_score, plot_scores_dist, get_starred_repos
 
 def main():
     #get csv file
@@ -10,8 +10,11 @@ def main():
     ratings = []
     print("Welcome to the repository recommendation system.")
     print("Based on your preferences, This program will recommend a repository for you to explore.")
+    github_username = input("What is your github username?: ")
+    github_token = input("Enter github token: ")
+    print(github_token)
     num_recs = int(input("Number of repos to recommended: "))
-    choose_repo = input("Enter repos you like (else random)? Enter y or n: ")
+    choose_repo = input("Enter repos you like (else random or starred)? Enter y or n: ")
     rate_repos = input("Do you want to rate repos? Enter y or n: ")
     if choose_repo == "y":
         num_repos = int(input("Number of repos to input: "))
@@ -26,7 +29,13 @@ def main():
         if rate_repos != "y":
             ratings = None
     else:
-        rec_input = df.sample(n=3)["Repository Name"].to_list()
+        star_input = input("Would you like to use repos you starred (else random)? Enter y or n: ")
+        if star_input == "y":
+
+            repo_list = get_starred_repos(github_username)
+            rec_input = [item['name'] for item in repo_list]
+        else:
+            rec_input = df.sample(n=3)["Repository Name"].to_list()
         if rate_repos == "y":
             for rec in rec_input:
                 rating = int(input(f"Enter a rating score from 1-10 for the repo {rec}: "))

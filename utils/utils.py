@@ -16,6 +16,7 @@ load_dotenv()
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  # put your PAT in env var
 #print("Token loaded?", bool(GITHUB_TOKEN))
 
+
 def gh_get(url, accept="application/vnd.github.v3+json"):
     headers = {"Accept": accept}
     if GITHUB_TOKEN:
@@ -23,6 +24,50 @@ def gh_get(url, accept="application/vnd.github.v3+json"):
     r = requests.get(url, headers=headers)
     return r
 
+def get_starred_repos(username, token=None):
+    """
+    Get all starred repositories for a GitHub user.
+    
+    Args:
+        username: GitHub username
+        token: Personal access token (optional, but recommended for higher rate limits)
+    """
+    headers = {}
+    if token:
+        headers['Authorization'] = f'token {token}'
+    
+    starred_repos = []
+    page = 1
+    
+    while True:
+        url = f'https://api.github.com/users/{username}/starred'
+        params = {'page': page, 'per_page': 100}
+        
+        response = requests.get(url, headers=headers, params=params)
+        
+        if response.status_code != 200:
+            print(f"Error: {response.status_code}")
+            print(response.json())
+            break
+        
+        repos = response.json()
+        
+        if not repos:
+            break
+        
+        for repo in repos:
+            starred_repos.append({
+                'name': repo['full_name'],
+                'url': repo['html_url'],
+                'description': repo['description'],
+                'stars': repo['stargazers_count'],
+                'language': repo['language'],
+                'updated_at': repo['updated_at']
+            })
+        
+        page += 1
+    
+    return starred_repos
 
 def score_repo_from_topics(topics_str, normalize=False):
     # normalize topics into a list of tokens
