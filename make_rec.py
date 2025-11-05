@@ -2,6 +2,7 @@ import pandas as pd
 import sys
 from utils.utils import classify_repo, score_repo_from_topics, normalize_scores, blend_scores
 from utils.utils import get_repo_scores, add_user_match_score, plot_scores_dist, get_starred_repos, error_check
+import random
 
 
 def main():
@@ -37,6 +38,9 @@ def main():
     else:
         if choose_repo=="s":
             repo_list = get_starred_repos(github_username)
+            if len(repo_list) > 10:
+                #get random sample from list if list is too long (limited to 10)
+                repo_list = random.sample(repo_list, 10)
             rec_input = [item['name'] for item in repo_list]
         else:
             rec_input = df.sample(n=3)["Repository Name"].to_list()
