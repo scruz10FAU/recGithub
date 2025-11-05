@@ -15,7 +15,7 @@ def main():
     github_username = input("What is your github username?: ")
     num_recs = input("Number of repos to recommended: ")
     num_recs = error_check(num_recs, user_type="int", user_min=1, user_max=10)
-    choose_repo = input("Choose input mode. Enter r for random, i for custom input, s for starred : ")
+    choose_repo = input("Choose input mode. Enter r for random, i for custom input, s for starred: ")
     choose_repo = error_check(choose_repo, ["r", "i", "s"])
     rate_repos = input("Do you want to rate repos? Enter y or n: ")
     rate_repos = error_check(rate_repos, choices=["y", "n"])
