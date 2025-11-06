@@ -1,6 +1,4 @@
 import pandas as pd
-import sys
-from utils.utils import classify_repo, score_repo_from_topics, normalize_scores, blend_scores
 from utils.utils import get_repo_scores, add_user_match_score, plot_scores_dist, get_starred_repos, error_check
 import random
 

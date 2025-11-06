@@ -382,12 +382,12 @@ def plot_scores_dist(repos, scores, ratings=None, recs=None):
     ax.set_ylabel("Genre Weight Based on Selection")
     ax.set_title(f"Weight of Each Genre Based on Repos Selected {weights_string} {repo_label}")
     ax.set_xticklabels(pretty_index, rotation=45, ha="right", fontsize=8, linespacing=1)
-    fig.set_size_inches(8, 6)     # wider figure
+    fig.set_size_inches(9.3, 4.5)     # wider figure
     fig.subplots_adjust(bottom=0.28)  # extra bottom margin for labels
     
     if recs is not None:
         box = ax.get_position()
-        ax.set_position([box.x0, box.y0, box.width * 0.95, box.height])
+        ax.set_position([box.x0, box.y0, box.width * 1, box.height])
         rec_text = "Your recommendations are: "
         for rec in recs:
             rec_text += "\n " + str(rec)
@@ -425,5 +425,8 @@ def add_user_match_score(df, weight_dict, input_repos, repo_col="Repository Name
 
     # sort best -> worst
     df_sorted = df.sort_values("user_match_score", ascending=False)
+    df_sorted.to_csv("assets/test.csv")
 
     return df_sorted, genre_cols
+
+
