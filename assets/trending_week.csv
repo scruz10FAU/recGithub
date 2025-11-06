@@ -18,7 +18,6 @@ Developer,Repository Name,Number of Stars,Forks,Stars Today,Language,Topics
 @awesomekling,LadybirdBrowser/ladybird,54697,2420,4794,C++,"['browser', 'browser-engine']"
 @guofei9987,guofei9987/blind_watermark,10534,1067,2863,Python,"['image-processing', 'watermark', 'watermark-image', 'blind-watermark']"
 @yeongpin,yeongpin/cursor-free-vip,39526,4805,2995,Python,"['automation', 'free', 'cursor', 'cursors', 'pro', 'cursor-ide', 'freetrial', 'cursorai', 'cursor-ai']"
-@ultmaster,microsoft/agent-lightning,4237,289,1883,Python,"['agent', 'reinforcement-learning', 'mlops', 'llm', 'agentic-ai']"
 @harshavardhana,minio/minio,57603,6400,1841,Go,"['go', 'kubernetes', 'cloud', 'storage', 's3', 'k8s', 'cloudnative', 'objectstorage', 'multi-cloud', 'cloudstorage', 'amazon-s3', 'multi-cloud-kubernetes']"
 @moondevonyt,moondevonyt/moon-dev-ai-agents,1835,971,869,Python,['No topics']
 @CarsonRoscoe,coinbase/x402,3480,570,1126,TypeScript,['No topics']
@@ -35,3 +34,18 @@ Developer,Repository Name,Number of Stars,Forks,Stars Today,Language,Topics
 @cyyeh,Canner/WrenAI,12612,1313,291,TypeScript,"['agent', 'bigquery', 'charts', 'sql', 'postgresql', 'bedrock', 'business-intelligence', 'openai', 'spreadsheets', 'vertex', 'genbi', 'text-to-sql', 'rag', 'text2sql', 'duckdb', 'llm', 'anthropic', 'sqlai', 'text-to-chart']"
 @yuja,jj-vcs/jj,21753,769,413,Rust,"['git', 'cli', 'mercurial', 'vcs', 'jj', 'jujutsu']"
 @chrislusf,seaweedfs/seaweedfs,26738,2510,536,Go,"['kubernetes', 'distributed-systems', 'fuse', 'replication', 'cloud-drive', 's3', 'posix', 's3-storage', 'hdfs', 'distributed-storage', 'distributed-file-system', 'erasure-coding', 'object-storage', 'blob-storage', 'seaweedfs', 'hadoop-hdfs', 'tiered-file-system']"
+@666ghj,666ghj/BettaFish,17723,3453,12306,Python,"['nlp', 'sentiment-analysis', 'python3', 'data-analysis', 'deep-search', 'multi-agent-system', 'agent-framework', 'public-opinion-analysis', 'llms', 'deep-research']"
+@ultmaster,microsoft/agent-lightning,7287,554,3315,Python,"['agent', 'reinforcement-learning', 'mlops', 'llm', 'agentic-ai']"
+@Zongwei9888,HKUDS/DeepCode,9629,1299,1434,Python,"['llm-agent', 'agentic-coding']"
+@giga-a,qeeqbox/social-analyzer,17700,1478,2038,JavaScript,"['nodejs', 'javascript', 'python', 'cli', 'profile', 'social-media', 'osint', 'analysis', 'analyzer', 'pentesting', 'username', 'pentest', 'nodejs-cli', 'information-gathering', 'security-tools', 'reconnaissance', 'social-analyzer', 'person-profile', 'sosint']"
+@mudler,mudler/LocalAI,37499,2955,1028,Go,"['api', 'ai', 'mcp', 'decentralized', 'text-generation', 'distributed', 'tts', 'image-generation', 'llama', 'object-detection', 'mamba', 'libp2p', 'gemma', 'mistral', 'audio-generation', 'llm', 'stable-diffusion', 'rwkv', 'musicgen', 'rerank']"
+@jordanhunt22,get-convex/chef,3358,602,875,TypeScript,['No topics']
+@jlooper,microsoft/Web-Dev-For-Beginners,94032,14624,1503,JavaScript,"['javascript', 'css', 'html', 'learning', 'education', 'curriculum', 'tutorials', 'microsoft-for-beginners']"
+@GeeeekExplorer,GeeeekExplorer/nano-vllm,8370,1022,1079,Python,"['nlp', 'deep-learning', 'inference', 'pytorch', 'transformer', 'llm']"
+@chenos,nocobase/nocobase,18117,2055,748,TypeScript,"['internal-tools', 'crud', 'crm', 'admin-dashboard', 'self-hosted', 'web-application', 'project-management', 'salesforce', 'developer-tools', 'airtable', 'workflows', 'low-code', 'no-code', 'app-builder', 'internal-tool', 'nocode', 'low-code-development-platform', 'no-code-platform', 'low-code-platform', 'low-code-framework']"
+@kommander,sst/opentui,4584,168,1226,TypeScript,['No topics']
+@hacksider,hacksider/Deep-Live-Cam,75350,10965,1021,Python,"['ai', 'realtime', 'artificial-intelligence', 'faceswap', 'gan', 'webcam', 'webcamera', 'deepfake', 'deep-fake', 'ai-face', 'video-deepfake', 'realtime-deepfake', 'deepfake-webcam', 'realtime-face-changer', 'fake-webcam', 'ai-webcam', 'ai-deep-fake', 'real-time-deepfake']"
+@wintonzheng,Skyvern-AI/skyvern,16659,1413,1244,Python,"['python', 'api', 'workflow', 'automation', 'browser', 'ai', 'selenium', 'computer', 'vision', 'gpt', 'browser-automation', 'rpa', 'puppeteer', 'powerautomate', 'playwright', 'llm']"
+@meowgorithm,charmbracelet/glow,20871,501,1152,Go,"['markdown', 'cli', 'hacktoberfest', 'excitement']"
+@angiejones,block/goose,21901,1966,908,Rust,"['mcp', 'hacktoberfest']"
+@AntoLC,suitenumerique/docs,14639,449,611,Python,"['government', 'documentation', 'django', 'opensource', 'mit', 'knowledge', 'wiki', 'reactjs', 'self-hosted', 'mit-license', 'collaborative', 'knowledge-base', 'yjs', 'realtime-collaboration', 'g2g', 'blocknotejs']"

@@ -13,26 +13,31 @@ Developer,Repository Name,Number of Stars,Forks,Stars Today,Language,Topics
 @LarFii,HKUDS/RAG-Anything,9146,1044,3897,Python,"['retrieval-augmented-generation', 'multi-modal-rag']"
 @jdx,jdx/mise,20660,690,1293,Rust,['No topics']
 @tannerlinsley,TanStack/router,11827,1302,714,TypeScript,"['react', 'javascript', 'url', 'search', 'framework', 'typescript', 'router', 'state-management', 'ssr', 'routing', 'rpc', 'route', 'typesafe', 'fullstack', 'searchparams', 'server-functions']"
-@CloudsOfChange,anthropics/prompt-eng-interactive-tutorial,25421,2311,6939,Jupyter Notebook,['No topics']
-@zealoushacker,anthropics/claude-cookbooks,26443,2653,5978,Jupyter Notebook,['No topics']
-@cjpais,cjpais/Handy,4806,298,3423,TypeScript,"['cross-platform', 'accessibility', 'speech-to-text', 'tauri-v2']"
-@karpathy,karpathy/nanoGPT,48507,8115,3736,Python,['No topics']
-@awesomekling,LadybirdBrowser/ladybird,54696,2420,5843,C++,"['browser', 'browser-engine']"
-@ROBERT-MCDOWELL,DrewThomasson/ebook2audiobook,14210,1073,2794,Python,"['multilingual', 'windows', 'linux', 'docker', 'mac', 'kaggle', 'audiobook', 'tts', 'english', 'epub', 'chinese', 'gradio', 'audiobooks', 'colab-notebook', 'voice-cloning', 'xtts']"
-@treoden,evershopcommerce/evershop,8481,2000,2749,TypeScript,"['react', 'ecommerce', 'typescript', 'ecommerce-platform', 'ecommerce-framework']"
 @TibixDev,TibixDev/winboat,14205,358,9004,TypeScript,"['windows', 'linux', 'docker', 'docker-compose', 'virtualization', 'rdp']"
-@jingyaogong,jingyaogong/minimind,32081,3699,5256,Python,"['artificial-intelligence', 'large-language-model']"
-@lfnovo,lfnovo/open-notebook,9019,884,4355,TypeScript,"['learning', 'notebook', 'assistant', 'note-taking', 'self-learning', 'notes-app']"
 @maidul98,Infisical/infisical,23369,1558,3282,TypeScript,"['go', 'cli', 'golang', 'open-source', 'security', 'postgres', 'typescript', 'vault', 'acme', 'secret-management', 'secrets', 'environment-variables', 'pki', 'node-js', 'security-tools', 'secrets-management', 'certificate-management', 'secret-scanning', 'secret-manager', 'private-ca']"
 @hsliuping,hsliuping/TradingAgents-CN,11959,2544,4613,Python,['No topics']
-@ShuaiBai623,QwenLM/Qwen3-VL,15723,1231,2296,Jupyter Notebook,['No topics']
-@CarsonRoscoe,coinbase/x402,3480,571,1709,TypeScript,['No topics']
 @alckasoc,simular-ai/Agent-S,7739,840,1433,Python,"['memory', 'planning', 'cua', 'ai-agents', 'grounding', 'computer-automation', 'mllm', 'retrieval-augmented-generation', 'in-context-reinforcement-learning', 'agent-computer-interface', 'gui-agents', 'computer-use', 'computer-use-agent']"
-@harshavardhana,minio/minio,57603,6400,2349,Go,"['go', 'kubernetes', 'cloud', 'storage', 's3', 'k8s', 'cloudnative', 'objectstorage', 'multi-cloud', 'cloudstorage', 'amazon-s3', 'multi-cloud-kubernetes']"
-@emilio,servo/servo,33318,3316,1716,Rust,"['rust', 'browser', 'web', 'servo', 'webbrowser', 'webplatform', 'webengine']"
-@yeongpin,yeongpin/cursor-free-vip,39526,4805,3828,Python,"['automation', 'free', 'cursor', 'cursors', 'pro', 'cursor-ide', 'freetrial', 'cursorai', 'cursor-ai']"
-@LDOUBLEV,PaddlePaddle/PaddleOCR,62037,9190,5700,Python,"['ocr', 'pdf-parser', 'kie', 'document-translation', 'rag', 'chineseocr', 'ai4science', 'pp-ocr', 'document-parsing', 'pp-structure', 'pdf-extractor-rag', 'pdf2markdown', 'paddleocr-vl']"
 @pi0,nitrojs/nitro,9460,737,1719,TypeScript,['No topics']
 @karpathy,karpathy/micrograd,13552,1993,712,Jupyter Notebook,['No topics']
 @LeiWang1999,tile-ai/tilelang,3788,290,1944,C++,['No topics']
 @SkalskiP,roboflow/rf-detr,3909,445,837,Python,"['machine-learning', 'computer-vision', 'object-detection', 'sota', 'instance-segmentation', 'detr', 'rf-detr']"
+@gschier,mountain-loop/yaak,15208,550,7446,TypeScript,"['graphql', 'http', 'websocket', 'grpc', 'http-client', 'sse', 'tauri', 'postman-alternative', 'insomnia-alternative', 'bruno-alternative']"
+@CloudsOfChange,anthropics/prompt-eng-interactive-tutorial,25924,2364,7363,Jupyter Notebook,['No topics']
+@ultmaster,microsoft/agent-lightning,7287,554,5364,Python,"['agent', 'reinforcement-learning', 'mlops', 'llm', 'agentic-ai']"
+@zealoushacker,anthropics/claude-cookbooks,27094,2718,6577,Jupyter Notebook,['No topics']
+@lfnovo,lfnovo/open-notebook,9614,951,4951,TypeScript,"['learning', 'notebook', 'assistant', 'note-taking', 'self-learning', 'notes-app']"
+@karpathy,karpathy/nanoGPT,49040,8215,4229,Python,['No topics']
+@ROBERT-MCDOWELL,DrewThomasson/ebook2audiobook,14885,1143,3362,Python,"['multilingual', 'windows', 'linux', 'docker', 'mac', 'kaggle', 'audiobook', 'tts', 'english', 'epub', 'chinese', 'gradio', 'audiobooks', 'colab-notebook', 'voice-cloning', 'xtts']"
+@jingyaogong,jingyaogong/minimind,32621,3778,5609,Python,"['artificial-intelligence', 'large-language-model']"
+@treoden,evershopcommerce/evershop,8694,2021,2967,TypeScript,"['react', 'ecommerce', 'typescript', 'ecommerce-platform', 'ecommerce-framework']"
+@cjpais,cjpais/Handy,5869,367,3889,TypeScript,"['cross-platform', 'accessibility', 'speech-to-text', 'tauri-v2']"
+@sammccauley117,google-gemini/computer-use-preview,1702,216,1696,Python,['No topics']
+@harshavardhana,minio/minio,57898,6426,2562,Go,"['go', 'kubernetes', 'cloud', 'storage', 's3', 'k8s', 'cloudnative', 'objectstorage', 'multi-cloud', 'cloudstorage', 'amazon-s3', 'multi-cloud-kubernetes']"
+@CarsonRoscoe,coinbase/x402,3795,673,1839,TypeScript,['No topics']
+@ShuaiBai623,QwenLM/Qwen3-VL,16017,1271,2395,Jupyter Notebook,['No topics']
+@awesomekling,LadybirdBrowser/ladybird,55241,2451,6137,C++,"['browser', 'browser-engine']"
+@LDOUBLEV,PaddlePaddle/PaddleOCR,62819,9258,6257,Python,"['ocr', 'pdf-parser', 'kie', 'document-translation', 'rag', 'chineseocr', 'ai4science', 'pp-ocr', 'document-parsing', 'pp-structure', 'pdf-extractor-rag', 'pdf2markdown', 'paddleocr-vl']"
+@emilio,servo/servo,33709,3338,2057,Rust,"['rust', 'browser', 'web', 'servo', 'webbrowser', 'webplatform', 'webengine']"
+@davila7,davila7/claude-code-templates,10313,889,3664,JavaScript,"['claude', 'anthropic', 'anthropic-claude', 'claude-code']"
+@yeongpin,yeongpin/cursor-free-vip,40235,4864,4480,Python,"['automation', 'free', 'cursor', 'cursors', 'pro', 'cursor-ide', 'freetrial', 'cursorai', 'cursor-ai']"
+@Dhravya,supermemoryai/supermemory,13307,1387,2294,TypeScript,"['postgres', 'typescript', 'remix', 'tailwindcss', 'vite', 'cloudflare-workers', 'cloudflare-kv', 'cloudflare-pages', 'drizzle-orm']"
