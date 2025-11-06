@@ -6,9 +6,11 @@ import requests
 import base64
 import pandas as pd
 import numpy as np
-from genre_keywords import GENRE_KEYWORDS
+if __name__ == "utils.utils":
+    from utils.genre_keywords import GENRE_KEYWORDS, score_cols
+else:
+    from genre_keywords import GENRE_KEYWORDS, score_cols
 from dotenv import load_dotenv
-from genre_keywords import score_cols
 import matplotlib.pyplot as plt
 import sys
 
