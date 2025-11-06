@@ -55,8 +55,13 @@ def add_genre_scores(csv_file, alpha=0.5, empty_only=False):
                     df[col] = None
                 
                 df.at[idx, col] = val
-            if (idx+1) % 10 == 0 or idx+1 == len(df):
+            if ((idx+1) % 10 == 0 or idx+1 == len(df)) and not empty_only:
+                #print update after every 10 repos are completed
                 print(f"Completed {idx+1}/{len(df)}")
+            if empty_only:
+                #print update for every empty row completed
+                index = empty_repos.index(repo_name)
+                print(f"Completed {index+1}/{len(empty_repos)} of empty rows")
 
 
         df.to_csv(csv_file, index=False)
