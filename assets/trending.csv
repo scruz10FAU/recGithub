@@ -5,7 +5,6 @@ Developer,Repository Name,Number of Stars,Forks,Stars Today,Language,Topics
 @ROBERT-MCDOWELL,DrewThomasson/ebook2audiobook,12884,975,476,Python,"['multilingual', 'windows', 'linux', 'docker', 'mac', 'kaggle', 'audiobook', 'tts', 'english', 'epub', 'chinese', 'gradio', 'audiobooks', 'colab-notebook', 'voice-cloning', 'xtts']"
 @zealoushacker,anthropics/claude-cookbooks,24313,2455,1405,Jupyter Notebook,['No topics']
 @sharkdp,sharkdp/bat,55313,1381,92,Rust,"['git', 'syntax-highlighting', 'rust', 'cli', 'terminal', 'command-line', 'tool', 'hacktoberfest']"
-@wintonzheng,Skyvern-AI/skyvern,15128,1282,188,Python,"['python', 'api', 'workflow', 'automation', 'browser', 'computer', 'vision', 'gpt', 'browser-automation', 'rpa', 'playwright', 'llm']"
 @hnwyllmm,oceanbase/miniob,4099,1479,39,C++,"['training', 'classroom', 'education', 'database', 'cplusplus', 'mini-database', 'hackertoberfest', 'learn-to-database']"
 @csukuangfj,k2-fsa/sherpa-onnx,7912,912,16,C++,"['android', 'windows', 'macos', 'linux', 'lazarus', 'raspberry-pi', 'ios', 'text-to-speech', 'csharp', 'cpp', 'dotnet', 'speech-to-text', 'aarch64', 'mfc', 'risc-v', 'object-pascal', 'asr', 'arm32', 'onnx', 'vits']"
 @emilio,servo/servo,32456,3289,507,Rust,"['rust', 'browser', 'web', 'servo', 'webbrowser', 'webplatform', 'webengine']"
@@ -34,3 +33,16 @@ Developer,Repository Name,Number of Stars,Forks,Stars Today,Language,Topics
 @actions-user,projectdiscovery/nuclei-templates,11131,3110,19,JavaScript,"['security', 'fingerprint', 'exploits', 'nuclei', 'bugbounty', 'vulnerability-detection', 'hacktoberfest', 'exploit-development', 'nuclei-templates', 'nuclei-checks']"
 @jlooper,microsoft/Web-Dev-For-Beginners,93032,14442,450,JavaScript,"['javascript', 'css', 'html', 'learning', 'education', 'curriculum', 'tutorials', 'microsoft-for-beginners']"
 @ljharb,nvm-sh/nvm,88638,9490,24,Shell,"['nodejs', 'shell', 'bash', 'zsh', 'node', 'install', 'nvm', 'posix', 'lts', 'version-manager', 'node-js', 'posix-compliant', 'nvmrc']"
+@666ghj,666ghj/BettaFish,17709,3449,3224,Python,"['nlp', 'sentiment-analysis', 'python3', 'data-analysis', 'deep-search', 'multi-agent-system', 'agent-framework', 'public-opinion-analysis', 'llms', 'deep-research']"
+@wintonzheng,Skyvern-AI/skyvern,16655,1413,878,Python,"['python', 'api', 'workflow', 'automation', 'browser', 'ai', 'selenium', 'computer', 'vision', 'gpt', 'browser-automation', 'rpa', 'puppeteer', 'powerautomate', 'playwright', 'llm']"
+@chenos,nocobase/nocobase,18115,2054,379,TypeScript,"['internal-tools', 'crud', 'crm', 'admin-dashboard', 'self-hosted', 'web-application', 'project-management', 'salesforce', 'developer-tools', 'airtable', 'workflows', 'low-code', 'no-code', 'app-builder', 'internal-tool', 'nocode', 'low-code-development-platform', 'no-code-platform', 'low-code-platform', 'low-code-framework']"
+@mudler,mudler/LocalAI,37497,2955,351,Go,"['api', 'ai', 'mcp', 'decentralized', 'text-generation', 'distributed', 'tts', 'image-generation', 'llama', 'object-detection', 'mamba', 'libp2p', 'gemma', 'mistral', 'audio-generation', 'llm', 'stable-diffusion', 'rwkv', 'musicgen', 'rerank']"
+@kommander,sst/opentui,4580,168,204,TypeScript,['No topics']
+@imthenachoman,imthenachoman/How-To-Secure-A-Linux-Server,22144,1412,936,Unknown,"['linux', 'security', 'server', 'hardening', 'security-hardening', 'linux-server', 'cc-by-sa', 'hardening-steps']"
+@jba,modelcontextprotocol/go-sdk,2743,250,17,Go,['No topics']
+@ad-on-is,ad-on-is/rachoon,372,21,45,TypeScript,['No topics']
+@Koitharu,KotatsuApp/Kotatsu,7214,370,26,Kotlin,"['android', 'manga', 'comics', 'mangareader', 'manga-reader', 'webtoon']"
+@ggerganov,ggml-org/ggml,13413,1380,12,C++,"['machine-learning', 'automatic-differentiation', 'tensor-algebra', 'large-language-models']"
+@kierank,FFmpeg/asm-lessons,9741,291,215,Unknown,['No topics']
+@whummer,localstack/localstack,61794,4327,467,Python,"['python', 'testing', 'aws', 'cloud', 'continuous-integration', 'developer-tools', 'localstack']"
+@PKUFlyingPig,PKUFlyingPig/cs-self-learning,68857,7694,167,HTML,['No topics']
