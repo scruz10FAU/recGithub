@@ -1,8 +1,11 @@
-from score_repos import classify_repo, score_repo_from_topics, normalize_scores
+from score_repos import classify_repo
+from utils import score_repo_from_topics
+from get_empty import get_empty_genres
 import pandas as pd
 import os
 import re
 from collections import defaultdict
+import argparse
 
 
 def blend_scores(content_scores, topic_scores, alpha=0.7, normalized=False):
@@ -24,7 +27,8 @@ def blend_scores(content_scores, topic_scores, alpha=0.7, normalized=False):
         return {genre: val / max_val for genre, val in final.items()}
 
 def add_genre_scores(csv_file, alpha=0.5, empty_only=False):
-    empty_repos = ['karpathy/micrograd', 'nitrojs/nitro', 'QwenLM/Qwen3-VL', 'allenai/olmocr', 'TheRobotStudio/SO-ARM100', 'anthropics/claude-cookbooks', 'allenai/olmocr', 'iam-veeramalla/aws-devops-zero-to-hero'] 
+    if empty_only:
+        empty_repos = get_empty_genres(csv_file)
     if os.path.exists(csv_file):
         df = pd.read_csv(csv_file)
         for idx, row in df.iterrows():
@@ -63,8 +67,14 @@ def add_genre_scores(csv_file, alpha=0.5, empty_only=False):
 
 
 def main():
-
-    add_genre_scores("assets/combined.csv", empty_only=False)
+    parser = argparse.ArgumentParser(
+        prog = "score repos from csv file",
+        description = "score repositories in a csv file"
+    )
+    parser.add_argument("--empty_only", "-e", action="store_true", help="Only update empty rows in csv")
+    parser.add_argument("--csv_file", "-c", type=str, default="assets/combined.csv", help="Enter csv file to use for program")
+    args = parser.parse_args()
+    add_genre_scores(args.csv_file, empty_only = args.empty_only)
 
 
 if __name__ == "__main__":
