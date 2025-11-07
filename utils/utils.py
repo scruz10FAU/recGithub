@@ -406,13 +406,13 @@ def add_user_match_score(df, weight_dict, input_repos, repo_col="Repository Name
     mask = ~df[repo_col].isin(input_repos)
     df = df[mask]
 
-    # genres we will actually use = intersection of df columns and weight_dict keys
+    #genres we will actually use = intersection of df columns and weight_dict keys
     genre_cols = [g for g in weight_dict.keys() if g in df.columns]
 
-    # build weight vector aligned with genre_cols
+    #build weight vector aligned with genre_cols
     w = np.array([weight_dict[g] for g in genre_cols])
 
-    # matrix of repo scores for those genres
+    #matrix of repo scores for those genres
     M = df[genre_cols].values  # shape: (num_repos, num_genres)
 
     #weighted dot product per repo added to dataframe
