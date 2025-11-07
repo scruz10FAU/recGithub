@@ -218,16 +218,11 @@ def classify_repo(owner_repo, use_creds=False, normalize=False):
     readme_text = get_repo_readme(owner, repo, use_creds)
     file_paths = get_repo_file_tree(owner, repo, use_creds)
 
-    #print("DEBUG", owner_repo)
-    #print("  readme_len:", len(readme_text))
-    #print("  num_file_paths:", len(file_paths))
-
     raw_scores = score_genres(readme_text, file_paths)
     if normalize:
         norm_scores = normalize_scores(raw_scores)
     else:
         norm_scores = raw_scores
-
 
     # Pick top genre
     top_genre = max(norm_scores, key=norm_scores.get) if norm_scores else None
@@ -323,7 +318,7 @@ def plot_max_scores(csv_file):
 def add_top_scores(csv_file):
     df = pd.read_csv(csv_file)
     df["top_genre"] = df[score_cols].idxmax(axis=1)
-    df.to_csv(csv_file)
+    df.to_csv(csv_file, index=False)
 
 
 
@@ -425,7 +420,7 @@ def add_user_match_score(df, weight_dict, input_repos, repo_col="Repository Name
 
     # sort best -> worst
     df_sorted = df.sort_values("user_match_score", ascending=False)
-    df_sorted.to_csv("assets/test.csv")
+    df_sorted.to_csv("assets/test.csv", index=False)
 
     return df_sorted, genre_cols
 

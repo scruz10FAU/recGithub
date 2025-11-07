@@ -7,6 +7,7 @@ def main():
 
     result = classify_repo(repo_name, use_creds=True, normalize=False)
     print(repo_name)
+
     print(result["top_genre"])
     print(result["scores"])
     

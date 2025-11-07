@@ -18,7 +18,7 @@ def combine_csv(csv_list, output_csv):
 
 def main():
     csv_files = ["assets/trending.csv", "assets/trending_month.csv", "assets/trending_week.csv", "assets/explore.csv"]
-    combine_csv(csv_files, "assets/combined.csv")
+    combine_csv(csv_files, "assets/combined1.csv")
 
 if __name__ == "__main__":
     main()
