@@ -5,7 +5,7 @@ import random
 
 def main():
     #get csv file
-    df = pd.read_csv("assets/combined.csv")
+    df = pd.read_csv("assets/combined1.csv")
     #Choose 3 repo names randomly for recommendation
     rec_input = []
     ratings = []

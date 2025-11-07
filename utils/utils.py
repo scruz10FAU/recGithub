@@ -192,13 +192,12 @@ def error_check(user_input, choices=["y", "n"], user_type="str", user_min=0, use
 
 def score_genres(text_blob, file_paths):
     genre_scores = defaultdict(int)
-
-    # Lowercase once
+    #Lowercase once
     blob = (text_blob + "\n" + "\n".join(file_paths)).lower()
 
     for genre, keywords in GENRE_KEYWORDS.items():
         for kw in keywords:
-            # simple keyword frequency
+            #simple keyword frequency
             hits = len(re.findall(r"\b" + re.escape(kw.lower()) + r"\b", blob))
             genre_scores[genre] += hits
 
@@ -206,7 +205,7 @@ def score_genres(text_blob, file_paths):
 
 
 def normalize_scores(raw_scores):
-    # avoid divide-by-zero
+    #avoid divide-by-zero
     if not raw_scores:
         return {}
     max_score = max(raw_scores.values()) or 1
